@@ -76,4 +76,8 @@ RUN cd /squad-build && ./scripts/git-build && \
     cd `python3 -c 'import squad; print(squad.__path__[0])'` && squad-admin compilemessages && \
     cd /app
 
+# for fetch action
+RUN mkdir /storage && \
+    chown -R squad:squad /storage
+
 USER squad
