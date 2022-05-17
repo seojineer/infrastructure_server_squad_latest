@@ -6,12 +6,14 @@ x-common-config: &common_config
     context: .
   volumes:
     - home:/app
+    - storage:/storage
   environment:
     - SQUAD_CELERY_BROKER_URL=amqp://rabbitmq
     - XDG_DATA_HOME=/app
 
 volumes:
   home:
+  storage:
 
 services:
   rabbitmq:
