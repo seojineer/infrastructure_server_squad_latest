@@ -26,9 +26,9 @@ services:
 
   web:
     <<: *common_config
-    command: squad --fast --bind 0.0.0.0:8000
+    command: squad --fast --bind 0.0.0.0:5000
     ports:
-      - '8000:8000'
+      - '5000:5000'
 
   worker:
     <<: *common_config
